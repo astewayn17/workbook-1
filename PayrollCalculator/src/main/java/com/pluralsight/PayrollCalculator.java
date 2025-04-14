@@ -8,13 +8,13 @@ public class PayrollCalculator {
 
         Scanner myScanner = new Scanner(System.in);
 
-        System.out.println("Please enter your name: ");
+        System.out.print("Please enter your name: ");
         String name = myScanner.next();
 
-        System.out.println("How many hours did you work? ");
+        System.out.print("How many hours did you work? ");
         float hours = myScanner.nextFloat();
 
-        System.out.println("Please enter your pay rate: ");
+        System.out.print("Please enter your pay rate: ");
         float rate = myScanner.nextFloat();
 
         float gross;

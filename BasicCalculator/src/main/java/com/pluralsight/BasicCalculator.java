@@ -8,19 +8,19 @@ public class BasicCalculator {
 
         Scanner myScanner = new Scanner(System.in);
 
-        System.out.println("Enter the first number: ");
+        System.out.print("Enter the first number: ");
         int num1 = myScanner.nextInt();
 
-        System.out.println("Enter the second number: ");
+        System.out.print("Enter the second number: ");
         int num2 = myScanner.nextInt();
 
-        System.out.println("Possible calculations: \n" +
+        System.out.print("Possible calculations: \n" +
                 "   (A)dd \n" +
                 "   (S)ubtract \n" +
                 "   (M)ultiply \n" +
                 "   (D)ivide \n");
 
-        System.out.println("Please select an option: ");
+        System.out.print("Please select an option: ");
         char M = myScanner.next().charAt(0);
 
         int product = num1 * num2;
