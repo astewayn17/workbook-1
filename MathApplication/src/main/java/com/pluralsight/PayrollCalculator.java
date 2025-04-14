@@ -12,16 +12,23 @@ public class PayrollCalculator {
         String name = myScanner.next();
 
         System.out.println("How many hours did you work? ");
-        float num1 = myScanner.nextFloat();
+        float hours = myScanner.nextFloat();
 
         System.out.println("Please enter your pay rate: ");
-        float num2 = myScanner.nextFloat();
+        float rate = myScanner.nextFloat();
 
-        float gross = num1 * num2;
+        float gross;
 
-        System.out.printf("Employee: %s\nEarned a gross pay of $%.2f\n", name, gross);
+        if (hours > 40) {
+            float otHours = hours - 40;
+            gross = (40 * rate) + (otHours * rate * 1.5f);
+        }
+        else {
+            gross = hours * rate;
+        }
 
+        System.out.println("--------------------------------");
 
-
+        System.out.printf("Employee: %s\nEarned a gross pay of: $%.2f\n", name, gross);
     }
 }
