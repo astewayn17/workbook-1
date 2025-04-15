@@ -13,8 +13,22 @@ public class SandwichShop {
 
         float basePrice = (size == 1) ? 5.45f : 8.95f;
 
+        System.out.print("Would you like a loaded sandwich? (Y) yes or (N) no ");
+        char loaded = Character.toUpperCase(myScanner.next().charAt(0));
+
+        float loadedPrice;
+        if (loaded == 'Y' && size == 1) {
+            loadedPrice = 1.00f;
+        }
+        else if (loaded == 'Y' && size == 2) {
+            loadedPrice = 1.75f;
+        }
+        else{
+            loadedPrice = 0.00f;
+        }
+
         System.out.print("What is your age? ");
-        int age = myScanner.nextByte();
+        byte age = myScanner.nextByte();
 
         float price;
         if (age <= 17) {
@@ -26,6 +40,8 @@ public class SandwichShop {
         else {
             price = basePrice;
         }
-        System.out.printf("The total cost of your sandwich will be: $%.2f", price);
+
+        float totalPrice = price + loadedPrice;
+        System.out.printf("\nThe total cost of your sandwich will be: $%.2f", totalPrice);
     }
 }
